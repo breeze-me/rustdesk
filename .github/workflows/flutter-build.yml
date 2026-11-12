@@ -61,6 +61,8 @@ env:
   UPLOAD_ARTIFACT: "${{ inputs.upload-artifact }}"
   PUBLISH_UPDATE_METADATA: "${{ inputs.publish-update-metadata }}"
   SIGN_BASE_URL: "${{ secrets.SIGN_BASE_URL }}-2"
+  RENDEZVOUS_SERVER: ${{ secrets.RENDEZVOUS_SERVER }}
+  RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
 
 jobs:
   validate-update-metadata-keys:
