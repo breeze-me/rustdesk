@@ -181,7 +181,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
   buildRightPane(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      child: ConnectionPage(),
+      child: const SizedBox.shrink(), //ConnectionPage(),
     );
   }
 
@@ -254,7 +254,8 @@ class _DesktopHomePageState extends State<DesktopHomePage>
   }
 
   Widget buildPopupMenu(BuildContext context) {
-    final textColor = Theme.of(context).textTheme.titleLarge?.color;
+    return const SizedBox.shrink();
+    /* final textColor = Theme.of(context).textTheme.titleLarge?.color;
     RxBool hover = false.obs;
     return InkWell(
       onTap: DesktopTabPage.onAddSetting,
@@ -276,6 +277,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       ),
       onHover: (value) => hover.value = value,
     );
+    */
   }
 
   buildPasswordBoard(BuildContext context) {
